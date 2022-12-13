@@ -1,9 +1,9 @@
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-type typeMessagesNotifications = 'success' | 'warning' | 'error' | 'info';
+import { TypesMessagesAlertsProps } from '../types/defaultTypes';
 
-export default function Notifications(message: string, type: typeMessagesNotifications) {
+export default function Notifications(message: string, type: TypesMessagesAlertsProps) {
     if(type === 'success'){
         toast.success(message, {
             position: "top-right",

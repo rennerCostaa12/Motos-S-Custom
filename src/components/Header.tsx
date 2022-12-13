@@ -5,19 +5,11 @@ import MenuUser from "./MenuUser";
 import { useState, useEffect } from "react";
 import { baseApi } from "../api/api";
 
-type userProps = {
-    id: number, 
-    email: string,
-    password: string,
-    first_name: string,
-    last_name: string,
-    username: string,
-    isSeller: boolean
-}
+import { UsersProps } from "../types/defaultTypes";
 
 export default function Header() {
 
-    const [user, setUser] = useState<userProps>();
+    const [user, setUser] = useState<UsersProps>();
     
     const idUser = localStorage.getItem('user');
     useEffect(() => {

@@ -73,11 +73,7 @@ export default function MenuUser({ firstName, lastName, isSeller }: MenuUserProp
                             'aria-labelledby': 'basic-button',
                         }}
                     >
-                        {isSeller ?
-                            <MenuItem onClick={handleRedirectAnnounceSales}>Anunciar vendas</MenuItem>
-                            :
-                            ''
-                        }
+                        {isSeller && <MenuItem onClick={handleRedirectAnnounceSales}>Anunciar vendas</MenuItem>}
                         <MenuItem onClick={handleRedirectEditProfile}>Editar Perfil</MenuItem>
                         <MenuItem onClick={handleLogout}>Sair</MenuItem>
                     </Menu>
