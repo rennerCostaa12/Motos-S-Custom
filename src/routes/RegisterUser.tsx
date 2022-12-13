@@ -10,7 +10,7 @@ import {
 
 import pathLogo from '../assets/logo.png';
 
-import React, {useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { baseApi } from "../api/api";
 
@@ -22,6 +22,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import LoadingComponent from "../components/Loading";
+
+import Notifications from "../components/Notifications";
 
 export default function Login() {
 
@@ -43,8 +45,6 @@ export default function Login() {
     const handleRegisterUser = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
-        setLoading(true);
-
         const formData = new FormData(event.target as HTMLFormElement);
 
         const data = Object.fromEntries(formData);
@@ -52,32 +52,16 @@ export default function Login() {
         const { first_name, last_name, email, password, confirmation_password } = data;
 
         if (password !== confirmation_password) {
-            toast.warning('As senhas não iguais!', {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "colored",
-            });
+            Notifications('As senhas não são iguais', 'warning');
             return;
         }
+
+        setLoading(true);
 
         baseApi.get(`/users?email=${email}`)
             .then(function (response) {
                 if (response.data.length >= 1) {
-                    toast.error('Já existe um usuário com esse email cadastrado! Insira outro email.', {
-                        position: "top-right",
-                        autoClose: 5000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "colored",
-                    });
+                    Notifications('Já existe um usuário com esse email cadastrado!', 'error');
                 } else {
                     baseApi.post('/users', {
                         email,
@@ -87,7 +71,9 @@ export default function Login() {
                         isSeller: false,
                     })
                         .then(function (response) {
-                            console.log(response);
+                            if (response.status === 201) {
+                                Notifications('Conta criada com sucesso!', 'success');
+                            }
                         })
                         .catch(function (error) {
                             console.log(error);

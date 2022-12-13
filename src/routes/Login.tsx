@@ -26,6 +26,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import LoadingComponent from "../components/Loading";
 
+import Notifications from "../components/Notifications";
+
 export default function Login() {
 
     const [loading, setLoading] = useState<boolean>(false);
@@ -63,28 +65,10 @@ export default function Login() {
                         login(response.data[0].id);
                         navigate('/');
                     } else {
-                        toast.error('Senha Incorreta!', {
-                            position: "top-right",
-                            autoClose: 5000,
-                            hideProgressBar: false,
-                            closeOnClick: true,
-                            pauseOnHover: true,
-                            draggable: true,
-                            progress: undefined,
-                            theme: "colored",
-                        });
+                        Notifications('Senha incorreta!', 'error');
                     }
                 } else {
-                    toast.error('Email Incorreto!', {
-                        position: "top-right",
-                        autoClose: 5000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "colored",
-                    });
+                    Notifications('Email incorreto!', 'error');
                 }
             })
             .catch(function (error) {
