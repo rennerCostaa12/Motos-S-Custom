@@ -1,0 +1,118 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "jhondoe@teste.com",
+      "password": "teste123456",
+      "first_name": "Renner",
+      "last_name": "Costa",
+      "isSeller": true
+    },
+    {
+      "id": 2,
+      "email": "mariadoe@teste.com",
+      "password": "teste123456",
+      "first_name": "Maria",
+      "last_name": "Doe",
+      "isSeller": false
+    }
+  ],
+  "purchases": [
+    {
+      "userId": 2,
+      "motorbikeId": "1",
+      "method_payment": "cartao debito",
+      "date_purchase": "23-10-2022",
+      "id": 2
+    },
+    {
+      "userId": 2,
+      "motorbikeId": "6",
+      "method_payment": "pix",
+      "date_purchase": "23-10-2022",
+      "id": 3
+    }
+  ],
+  "motorbikes": [
+    {
+      "id": 1,
+      "photo": "https://www.webmotors.com.br/wp-content/uploads/2020/06/22163856/Yamaha-Midnight-Star-950.jpeg",
+      "name": "Yamaha Midnight Star 950",
+      "motorcycle_brand": "Yamaha",
+      "price": 28000,
+      "engine_capacity": 950,
+      "type": "Custom",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "id": 2,
+      "photo": "https://www.webmotors.com.br/wp-content/uploads/2020/06/22163911/Harley-Davison-Sportster.jpeg",
+      "name": "Harley Davidson Sportster 883",
+      "motorcycle_brand": "Harley-Davidson",
+      "price": 32000,
+      "engine_capacity": 883,
+      "type": "Custom",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "id": 3,
+      "photo": "https://www.webmotors.com.br/wp-content/uploads/2020/06/22163926/Honda-Shadow-750.jpeg",
+      "name": "Honda Shadow 750",
+      "motorcycle_brand": "Honda",
+      "price": 75000,
+      "engine_capacity": 750,
+      "type": "Custom",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "id": 4,
+      "photo": "https://www.honda.com.br/motos/sites/hda/files/2022-03/CBR-650R-cinza.webp",
+      "name": "CBR 650R",
+      "motorcycle_brand": "Honda",
+      "price": 10000,
+      "engine_capacity": 650,
+      "type": "Sport",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "id": 5,
+      "photo": "https://www.honda.com.br/motos/sites/hda/files/2022-03/CBR-1000RR-vermelha.webp",
+      "name": "CBR 1000RR-R FIREBLADE SP",
+      "motorcycle_brand": "Honda",
+      "price": 15000,
+      "engine_capacity": 1000,
+      "type": "Sport",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "id": 6,
+      "photo": "https://www.honda.com.br/motos/sites/hda/files/2022-09/Elite-125-prata.webp",
+      "name": "Elite 125",
+      "motorcycle_brand": "Honda",
+      "price": 9000,
+      "engine_capacity": 750,
+      "type": "Scooter",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "id": 7,
+      "photo": "https://www.honda.com.br/motos/sites/hda/files/2022-09/Cor-PCX-azul_lateral.webp",
+      "name": "PCX",
+      "motorcycle_brand": "Honda",
+      "price": 12000,
+      "engine_capacity": 750,
+      "type": "Scooter",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "id": 8,
+      "photo": "https://www.honda.com.br/motos/sites/hda/files/2022-09/forza_site_cor%20cinza_grande_2.png",
+      "name": "Forza 350",
+      "motorcycle_brand": "Honda",
+      "price": 40000,
+      "engine_capacity": 350,
+      "type": "Scooter",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    }
+  ]
+}
