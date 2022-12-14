@@ -51,7 +51,7 @@ export default function Welcome() {
             })
     }, [updateList, pageCurrent]);
 
-    const totalItems = listMotorbike?.length
+    const totalItems = listMotorbike?.length;
 
     return (
         <div>

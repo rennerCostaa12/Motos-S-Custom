@@ -11,6 +11,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@hookform/resolvers": "^2.9.10",
     "@mui/material": "^5.10.16",
     "axios": "^1.2.0",
     "localforage": "^1.10.0",
@@ -18,11 +19,13 @@
     "phosphor-react": "^1.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.40.0",
     "react-router-dom": "^6.4.4",
     "react-toastify": "^9.1.1",
     "sort-by": "^1.2.0",
     "styled-components": "^5.3.6",
-    "uuidv4": "^6.2.13"
+    "uuidv4": "^6.2.13",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",

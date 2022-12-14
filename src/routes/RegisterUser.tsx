@@ -8,6 +8,8 @@ import {
     ContentForm
 } from "../styles/RegisterUser";
 
+import { useForm, SubmitHandler } from 'react-hook-form';
+
 import pathLogo from '../assets/logo.png';
 
 import React, { useEffect, useState } from "react";
@@ -25,7 +27,17 @@ import LoadingComponent from "../components/Loading";
 
 import Notifications from "../components/Notifications";
 
+type FormInputRegisterProps = {
+    first_name: string, 
+    last_name: string,
+    password: string,
+    email: string,
+    confirmation_password: string
+}
+
 export default function Login() {
+
+    const { register, handleSubmit } = useForm<FormInputRegisterProps>();
 
     const [loading, setLoading] = useState<boolean>(false);
 
@@ -41,14 +53,7 @@ export default function Login() {
 
     }, []);
 
-
-    const handleRegisterUser = (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-
-        const formData = new FormData(event.target as HTMLFormElement);
-
-        const data = Object.fromEntries(formData);
-
+    const handleRegisterUser: SubmitHandler<FormInputRegisterProps> = (data) => {
         const { first_name, last_name, email, password, confirmation_password } = data;
 
         if (password !== confirmation_password) {
@@ -111,31 +116,31 @@ export default function Login() {
                 />
                 <ContentForm>
                     <ImageLogo src={pathLogo} alt="logo" />
-                    <Form onSubmit={handleRegisterUser}>
+                    <Form onSubmit={handleSubmit(handleRegisterUser)}>
                         <label htmlFor="first_name">
                             Primeiro Nome
                         </label>
-                        <Inputs name="first_name" type="text" placeholder="Jhon" required />
+                        <Inputs {...register("first_name", { required: true })} type="text" placeholder="Jhon" />
 
-                        <label htmlFor="password">
+                        <label htmlFor="last_name">
                             Sobrenome
                         </label>
-                        <Inputs name="last_name" type="text" placeholder="Doe" required />
+                        <Inputs {...register("last_name", { required: true })} type="text" placeholder="Doe" />
 
                         <label htmlFor="email">
                             Email
                         </label>
-                        <Inputs name="email" type="email" placeholder="jhondoe@teste.com" required />
+                        <Inputs {...register("email", { required: true })} type="email" placeholder="jhondoe@teste.com" />
 
                         <label htmlFor="password">
                             Senha
                         </label>
-                        <Inputs name="confirmation_password" type="password" placeholder="Insira sua senha" required />
+                        <Inputs {...register("confirmation_password", { required: true })} type="password" placeholder="Insira sua senha" />
 
                         <label htmlFor="confirmation_password">
                             Confirmação de senha
                         </label>
-                        <Inputs name="password" type="password" placeholder="Insira sua confirmação de senha" required />
+                        <Inputs {...register("password", { required: true })} type="password" placeholder="Insira sua confirmação de senha" />
 
                         <div>
                             <Button type="submit" variant="contained">

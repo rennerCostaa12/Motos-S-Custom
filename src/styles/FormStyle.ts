@@ -9,15 +9,14 @@ export const ContainerForm = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
-    @media(max-width: 425px){
-        > button {
-            color: #A20D00;
-        }
-    }
 `
 export const ContentForm = styled.div`
     width: 750px;
+    position: relative;
+
+    > button {
+        color: #A20D00;
+    }
 
     animation-name: fadeIn;
     animation-duration: 1s;

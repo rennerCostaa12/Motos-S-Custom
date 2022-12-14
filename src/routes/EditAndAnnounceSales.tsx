@@ -123,8 +123,8 @@ export default function EditAndAnnounceSales() {
 
     return (
         <ContainerForm>
-            <ButtonBackPage redirect="/" />
             <ContentForm>
+                <ButtonBackPage redirect="/" />
                 <Form onSubmit={isSale}>
                     <h1>{id ? "Editar Anúncio" : "Anunciar Moto"}</h1>
                     <TextField

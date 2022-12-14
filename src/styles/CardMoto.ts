@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ContentCard = styled.div`
+    position: relative;
     width: 350px;
     border-radius: 8px;
     border: 2px solid #ffffff00;

@@ -51,26 +51,26 @@ export default function EditProfile() {
             username: username,
             email: email
         })
-        .then(function (response) {
-            if (response.status === 200) {
-                setTypeMessage('success');
-                setMessage('Perfil editado com sucesso!');
+            .then(function (response) {
+                if (response.status === 200) {
+                    setTypeMessage('success');
+                    setMessage('Perfil editado com sucesso!');
+                    setVisible(true);
+                    navigate('/');
+                }
+            })
+            .catch(function (error) {
+                setTypeMessage('error');
+                setMessage('Erro ao editar perfil!');
                 setVisible(true);
                 navigate('/');
-            }
-        })
-        .catch(function (error) {
-            setTypeMessage('error');
-            setMessage('Erro ao editar perfil!');
-            setVisible(true);
-            navigate('/');
-        })
+            })
     }
 
     return (
         <ContainerForm>
-            <ButtonBackPage redirect="/" />
             <ContentForm>
+                <ButtonBackPage redirect="/" />
                 <Form onSubmit={handleEditProfile}>
                     <h1>Editar Perfil</h1>
                     <TextField

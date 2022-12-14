@@ -8,8 +8,6 @@ import { MagnifyingGlass } from "phosphor-react";
 
 import { useNavigate } from "react-router-dom";
 
-
-
 export default function FieldSearch() {
 
     const [search, setSearch] = useState<string>('');
@@ -23,7 +21,7 @@ export default function FieldSearch() {
             return
         }
         
-        navigate(`/search/${search}`);
+        navigate(`./search/${search}`);
     }
 
     return (

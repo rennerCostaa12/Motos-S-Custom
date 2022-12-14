@@ -7,7 +7,7 @@ export const ContentButton = styled.button`
     top: 0%;
     color: #f1f1f1;
     font-size: 40px;
-    margin: 1.5rem;
+    margin: 2rem;
     cursor: pointer;
     background: none;
     border: none;
@@ -19,6 +19,6 @@ export const ContentButton = styled.button`
 
     @media(max-width: 425px){
         font-size: 23px;
-        margin: 1rem;
+        margin: 2.5rem 1rem;
     }
 `
